@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.min.css">
+</head>
+
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="parallax.jpg" id="slideImg">
+        </div>
+        <div class="overlay" id="homecontent">
+            <div class="content animate__animated animate__bounceInLeft">
+                <h1>Let's START TO DESIGN</h1>
+                <h3>Subscribe Itech YouTub channel to watch more videos, press the bell icon to get latest updates</h3>
+                <div class="button-group">
+                    <button type="button">WATCH MORE</button>
+                   
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var slideImg = document.getElementById("slideImg");
+        var homecontent = document.getElementById("homecontent");
+        var images = new Array(
+            "img1.jpg",
+            "img2.jpg",
+            "img3.jpg",
+        );
+        var content = new Array(
+            `<div class="overlay">
+            <div class="content animate__animated animate__bounceInLeft">
+                <h1>Let's START TO DESIGN100000000000</h1>
+                <h3>Subscribe Itech YouTub channel to watch more videos, press the bell icon to get latest updates</h3>
+                <div class="button-group">
+                    <button type="button">READ MORE</button>
+                   
+                </div>
+            </div>
+
+        </div>`,
+        `<div class="overlay">
+            <div class="content animate__animated animate__bounceInLeft">
+                <h1>Let's START TO DESIGN2000000000000000000</h1>
+                <h3>Subscribe Itech YouTub channel to watch more videos, press the bell icon to get latest updates</h3>
+                <div class="button-group">
+                    <button type="button">WATCH MORE</button>
+                   
+                </div>
+            </div>
+
+        </div>`,
+        `<div class="overlay">
+            <div class="content animate__animated animate__bounceInLeft">
+                <h1>Let's START TO DESIGN</h1>
+                <h3>Subscribe Itech YouTub channel to watch more videos, press the bell icon to get latest updates</h3>
+                <div class="button-group">
+                    <button type="button">WATCH MORE</button>
+                   
+                </div>
+            </div>
+
+        </div>`,
+        ); 
+       
+        var len = images.length;
+        var i=0;
+        var len1 = content.length;
+        var j=0;
+        function slider(){
+            if(i>len-1){
+                i=0;
+            }
+            slideImg.src = images[i];
+            i++;
+            setTimeout('slider()', 3000);
+            if(j>len1){
+                j=0;
+            }
+            homecontent.innerHTML=content[j];
+            j++
+            setTimeout('slider()', 3000);
+        };
+
+
+
+        
+       
+    </script>
+</body>

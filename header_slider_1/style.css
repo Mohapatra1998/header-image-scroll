@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+.banner{
+    width:100%;
+    height: 60vh;
+    position:relative;
+    overflow: hidden;
+}
+.slider{
+    width:100%;
+    height: 60vh;
+    position: absolute;
+    top: 0;
+}
+#slideImg{
+   width: 100%;
+   height: 60vh;
+   animation: zoom 3s linear infinite;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1.3);
+    }
+    15%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+.overlay{
+   width: 100%;
+   height: 60vh;
+   background: linear-gradient(rgba(161, 96, 96, 0.7),rgba(180, 96, 96, 0.7));
+   position: absolute;
+   top:0;  
+}
+.navbar{
+    width:85%;
+    display:flex;
+    align-items: center;
+    margin:35px auto;
+}
+.logo{
+    flex-basis: 15%;
+}
+.logo img{
+    width: 120px;
+    cursor:pointer;
+
+}
+.menu-icons{
+   flex:1;
+   align-items: center;
+   text-align: right;
+}
+
+
+.menu-icons img{
+    width: 20px;
+    margin-left:40px ;
+    color:white;
+    cursor: pointer;
+}
+.content{
+    width:60%;
+    margin: 50px auto 0;
+    /* text-align: center; */
+    color:#fff;
+    float:left;
+    position:relative;
+    top:30%;
+}
+.content h1{
+    font-size: 1.5rem;
+    
+}
+.content h3{
+    width: 80%;
+    margin:15px auto 90px;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding:15px 0;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fe7250;
+    background: #fe7250;
+    color:#fff;
+    position: relative;
+    top:-40px;
+    cursor: pointer;
+    transition:background 0.5s;
+
+}
+button:hover{
+   background: transparent;
+   border:2px solid #fff; 
+}
+.btn-2{
+    border:2px solid #fff;
+    background:transparent;
+}
+.btn-2:hover{
+    background: #fe7250;
+    border:2px solid #fe7250; 
+}
+@media (min-width:320px)  { 
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    .content h1{
+        font-size: 17px;
+        position: relative;
+        top: -38px;
+    }
+    .content h3{
+        font-size: 15px;
+        line-height: 17px;
+        position: relative;
+        top: -40px;
+}
+div.button-group{
+    position: relative;
+    top: -90px;
+}
+button{
+    width: 150px;
+    padding: 10px 0;
+    margin: 8px 10px;
+
+
+}
+.btn-2{
+    margin-top: 0px;
+}
+
+}
+
+ 
+@media (min-width:480px)  { 
+    /* smartphones, Android phones, landscape iPhone */
+    .content h1{
+        font-size: 25px;
+        position: relative;
+        top: -35px;
+    }
+    .content h3{
+        font-size: 15px;
+        line-height: 19px;
+        position: relative;
+        top: -43px;
+}
+div.button-group{
+    position: relative;
+    top: -90px;
+}
+button{
+    width: 150px;
+    padding: 10px 0;
+    margin: 0 10px;
+
+}
+.btn-2{
+    margin-top: 10px;
+}
+ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
